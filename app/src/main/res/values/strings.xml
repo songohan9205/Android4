@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mascotas</string>
+    <string name="nombreCV">Nombre Mascota</string>
+    <string name="bone">Calificar</string>
+    <string name="boneYellow">5</string>
+    <string name="titulo">Petagram</string>
+    <string name="favoritos">Favoritos</string>
+</resources>

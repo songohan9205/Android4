@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Mascota_Card_View">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgDogCV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dog_1"
+            android:layout_marginRight="@dimen/marginImage"
+            android:layout_marginLeft="@dimen/marginImage"
+            android:layout_marginTop="@dimen/marginImage"
+            android:layout_marginBottom="@dimen/marginBottomImage"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/marginImage"
+            android:layout_marginRight="@dimen/marginImage">
+
+            <ImageButton
+                android:id="@+id/imgBoneCV"
+                android:layout_width="@dimen/iconBones"
+                android:layout_height="@dimen/iconBones"
+                android:src="@drawable/bone"
+                android:contentDescription="@string/bone"
+                android:scaleType="centerCrop"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/nombreCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombreCV"
+                android:layout_marginTop="@dimen/marginImage"
+                android:layout_marginLeft="@dimen/marginImage" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/rateoCV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boneYellow"
+                android:layout_marginTop="@dimen/marginImage"
+                android:layout_marginRight="@dimen/marginRight" />
+
+            <ImageButton
+                android:id="@+id/boneYellowCV"
+                android:layout_width="@dimen/iconBones"
+                android:layout_height="@dimen/iconBones"
+                android:src="@drawable/bone_yellow"
+                android:contentDescription="@string/boneYellow"
+                android:scaleType="centerCrop"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
