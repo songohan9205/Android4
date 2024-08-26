@@ -39,7 +39,7 @@ public class Contacto extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_contacto);
 
-        Toolbar toolbar = findViewById(R.id.miActionBar3);
+        Toolbar toolbar = findViewById(R.id.toolbarOpt);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 

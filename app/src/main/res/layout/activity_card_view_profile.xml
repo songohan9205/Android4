@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainProfile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CardViewProfile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgDogCVProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dog_1"
+            android:layout_marginRight="@dimen/marginImage"
+            android:layout_marginLeft="@dimen/marginImage"
+            android:layout_marginTop="@dimen/marginImage"
+            android:layout_marginBottom="@dimen/marginBottomImage"
+            android:background="@color/black" />
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/marginImage"
+            android:layout_marginRight="@dimen/marginImage"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/rateoCVProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boneYellow"
+                android:layout_marginRight="@dimen/marginRight"
+                android:textSize="25dp" />
+
+            <ImageButton
+                android:id="@+id/boneYellowCVProfile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/bone_yellow"
+                android:contentDescription="@string/boneYellow"
+                android:scaleType="centerCrop"
+                android:background="@color/white"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

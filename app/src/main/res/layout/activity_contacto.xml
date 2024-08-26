@@ -9,7 +9,7 @@
 
     <include
         android:id="@+id/miActionBar3"
-        layout="@layout/toolbar" />
+        layout="@layout/toolbar_options" />
 
     <TextView
         android:id="@+id/titulo"

@@ -16,6 +16,9 @@
     <string name="descripcion">Estimado compañero. Para que funcione el envío de correo debes ingresar las credenciales en el activity <b>Contacto</b> líneas 103 y 104.
         La cuenta de correo que utilces debe tener acceso a <b>aplicaciones poco seguras</b>. SMTP configurado para Gmail.
     </string>
-    <string name="bio">Hola! Me llamo <b>Johan</b>, soy de Colombia. Durante 10 años he desarrollados en entornos web con PHP y JAVA, y ahora estoy iniciando en el mundo móvil.
+    <string name="bio">Hola! Me llamo <b>Johan</b>, soy de Colombia. Durante 10 años he desarrollado en entornos web con PHP y JAVA, y ahora estoy iniciando en el mundo móvil.
     </string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descripcion_imagen">Trosky</string>
 </resources>

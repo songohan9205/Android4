@@ -13,6 +13,11 @@ public class Mascota {
         this.esRanqueado = esRanqueado;
     }
 
+    public Mascota(int imagen, int ranqueo) {
+        this.imagen = imagen;
+        this.ranqueo = ranqueo;
+    }
+
     public String getNombre() {
         return nombre;
     }
