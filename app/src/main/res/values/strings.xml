@@ -5,4 +5,17 @@
     <string name="boneYellow">5</string>
     <string name="titulo">Petagram</string>
     <string name="favoritos">Favoritos</string>
+
+    <string name="menuContacto">Contacto</string>
+    <string name="menuAcerca">Acerca de</string>
+
+    <string name="nombreContacto">Nombre</string>
+    <string name="correoContacto">Correo</string>
+    <string name="mensajeContacto">Mensaje</string>
+    <string name="boton_texto">Enviar Comentario</string>
+    <string name="descripcion">Estimado compañero. Para que funcione el envío de correo debes ingresar las credenciales en el activity <b>Contacto</b> líneas 103 y 104.
+        La cuenta de correo que utilces debe tener acceso a <b>aplicaciones poco seguras</b>. SMTP configurado para Gmail.
+    </string>
+    <string name="bio">Hola! Me llamo <b>Johan</b>, soy de Colombia. Durante 10 años he desarrollados en entornos web con PHP y JAVA, y ahora estoy iniciando en el mundo móvil.
+    </string>
 </resources>

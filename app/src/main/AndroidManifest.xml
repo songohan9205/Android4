@@ -13,6 +13,14 @@
         android:theme="@style/Theme.Mascotas"
         tools:targetApi="31">
         <activity
+            android:name=".menus.AcercaDe"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".menus.Contacto"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".Favoritos"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
@@ -29,5 +37,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".menus.Contacto">
+
+    <include
+        android:id="@+id/miActionBar3"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/miActionBar3"
+        android:layout_marginTop="@dimen/espacio_campos"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:textSize="30dp"
+        android:text="@string/menuContacto"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombreContacto"
+        android:layout_marginTop="@dimen/espacio_campos"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        app:layout_constraintTop_toBottomOf="@id/titulo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputCorreo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/correoContacto"
+        android:layout_marginTop="@dimen/espacio_campos"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        app:layout_constraintTop_toBottomOf="@id/textInputNombre">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/mensajeContacto"
+        android:layout_marginTop="@dimen/espacio_campos"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        app:layout_constraintTop_toBottomOf="@id/textInputCorreo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditMensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:scrollbars="vertical"
+            android:maxLines="10"
+            android:gravity="top" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        app:layout_constraintTop_toBottomOf="@id/textInputMensaje"
+        android:layout_marginTop="@dimen/espacio_campos"
+        android:text="@string/descripcion" />
+
+    <Button
+        android:id="@+id/boton"
+        style="@style/Boton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/boton"
+        android:text="@string/boton_texto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
