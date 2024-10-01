@@ -1,6 +1,7 @@
-package com.example.mascotas;
+package com.example.mascotas.POJO;
 
 public class Mascota {
+    private int id;
     private String nombre;
     private int imagen;
     private int ranqueo;
@@ -16,6 +17,10 @@ public class Mascota {
     public Mascota(int imagen, int ranqueo) {
         this.imagen = imagen;
         this.ranqueo = ranqueo;
+    }
+
+    public Mascota() {
+
     }
 
     public String getNombre() {
@@ -48,5 +53,13 @@ public class Mascota {
 
     public void setEsRanqueado(boolean esRanqueado) {
         this.esRanqueado = esRanqueado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

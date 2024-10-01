@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mascotas.Mascota;
+import com.example.mascotas.POJO.Mascota;
 import com.example.mascotas.adapter.MascotaAdaptador;
 import com.example.mascotas.R;
+import com.example.mascotas.db.ConstructorMascotas;
+import com.example.mascotas.presentador.FragmentPresenter;
 
 import java.util.ArrayList;
 
@@ -25,6 +27,8 @@ public class ListFragment extends Fragment {
 
     ArrayList<Mascota> mascota;
     private RecyclerView listaMascotas;
+    private FragmentPresenter presenter;
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,18 +79,13 @@ public class ListFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         listaMascotas.setLayoutManager(llm);
 
-        inicializarLista();
+        ConstructorMascotas constructorMascotas = new ConstructorMascotas(getContext());
+        constructorMascotas.insertarMascotas();
+
+        presenter = new FragmentPresenter(getContext());
+        mascota = presenter.obtenerDatos();
         inicializarAdaptador();
         return view;
-    }
-
-    public void inicializarLista() {
-        mascota = new ArrayList<>();
-        mascota.add(new Mascota("Trosky", R.drawable.dog_1, 5, false));
-        mascota.add(new Mascota("Loki", R.drawable.dog_2, 5, false));
-        mascota.add(new Mascota("Dante", R.drawable.dog_3, 5, false));
-        mascota.add(new Mascota("Fofi", R.drawable.dog_4, 5, false));
-        mascota.add(new Mascota("Danger", R.drawable.dog_5, 5, false));
     }
 
     public void inicializarAdaptador() {

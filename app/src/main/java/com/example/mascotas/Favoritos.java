@@ -12,10 +12,15 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mascotas.POJO.Mascota;
 import com.example.mascotas.adapter.MascotaAdaptador;
+import com.example.mascotas.fragments.FavoritosFragment;
 import com.example.mascotas.menus.AcercaDe;
 import com.example.mascotas.menus.Contacto;
 
@@ -36,33 +41,19 @@ public class Favoritos extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas2);
-        LinearLayoutManager llm =new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(llm);
-
-        inicializarLista();
-        inicializarAdaptador();
+        if (savedInstanceState == null) {
+            Fragment favoritosFragment = new FavoritosFragment();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.fragment_container, favoritosFragment);
+            fragmentTransaction.commit();
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
-
-    public void inicializarLista() {
-        mascota = new ArrayList<>();
-        mascota.add(new Mascota("Pelos", R.drawable.dog_3, 4, false));
-        mascota.add(new Mascota("Negro", R.drawable.dog_1, 3, false));
-        mascota.add(new Mascota("Katana", R.drawable.dog_4, 6, false));
-        mascota.add(new Mascota("Fito", R.drawable.dog_5, 2, false));
-        mascota.add(new Mascota("Stuart", R.drawable.dog_2, 1, false));
-    }
-
-    public void inicializarAdaptador() {
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascota, this);
-        listaMascotas.setAdapter(adaptador);
     }
 
     public boolean onSupportNavigateUp() {

@@ -11,8 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mascotas.Mascota;
+import com.example.mascotas.POJO.Mascota;
 import com.example.mascotas.R;
+import com.example.mascotas.db.BaseDatos;
 
 import java.util.ArrayList;
 
@@ -43,10 +44,15 @@ public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.Masc
         holder.imgBoneCV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                BaseDatos db = new BaseDatos(context);
+                int nuevosLikes = mascota.getRanqueo() + 1;
+                mascota.setRanqueo(nuevosLikes);
                 mascota.setEsRanqueado(true);
-                mascota.setRanqueo(mascota.getRanqueo() + 1);
+                db.actualizarLikes(mascota.getId(), nuevosLikes);
+
                 notifyItemChanged(position);
                 Toast.makeText(context, "Puntaje agregado a" + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+                db.close();
             }
         });
     }
