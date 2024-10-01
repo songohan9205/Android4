@@ -4,4 +4,4 @@ Al tocar el hueso del lado izquierdo de cada mascota se va sumando un like a est
 Para acceder a favoritos se debe tocar la parte superior, la estrella con el número 5.
 Se listan los 5 favoritos en orden descendente, del que tiene más likes al que menos tiene.
 
-(images/1.jpg)
+(1.jpg)
